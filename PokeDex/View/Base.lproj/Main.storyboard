@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--PokemonVC-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="PokemonVC" customModule="PokeDex" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="7kN-Cz-UJA">
+                                <rect key="frame" x="0.0" y="44" width="414" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SIr-xn-hbq">
+                                <rect key="frame" x="0.0" y="100" width="414" height="414"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="SIr-xn-hbq" secondAttribute="height" multiplier="1:1" id="Rbp-ol-5YU"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pokemon name)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tvh-dX-miv">
+                                <rect key="frame" x="8" y="514" width="398" height="41"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle0"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(pokemon id)" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Eoo-gg-Abs">
+                                <rect key="frame" x="8" y="555" width="398" height="18"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleSubhead"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Eoo-gg-Abs" secondAttribute="trailing" constant="8" id="AJs-jl-wmo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Tvh-dX-miv" secondAttribute="trailing" constant="8" id="Cyy-gA-xUb"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SIr-xn-hbq" secondAttribute="trailing" id="Gel-1E-KLi"/>
+                            <constraint firstItem="Tvh-dX-miv" firstAttribute="top" secondItem="SIr-xn-hbq" secondAttribute="bottom" id="LDv-Vq-fNn"/>
+                            <constraint firstItem="7kN-Cz-UJA" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="MwS-9r-hXf"/>
+                            <constraint firstItem="SIr-xn-hbq" firstAttribute="top" secondItem="7kN-Cz-UJA" secondAttribute="bottom" id="PVW-5t-YQp"/>
+                            <constraint firstItem="Tvh-dX-miv" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="aJb-S5-u7v"/>
+                            <constraint firstItem="Eoo-gg-Abs" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="h5j-zq-Ob8"/>
+                            <constraint firstItem="Eoo-gg-Abs" firstAttribute="top" secondItem="Tvh-dX-miv" secondAttribute="bottom" id="ldK-2b-CH5"/>
+                            <constraint firstItem="7kN-Cz-UJA" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lgX-9U-C14"/>
+                            <constraint firstItem="SIr-xn-hbq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qDy-1N-01x"/>
+                            <constraint firstItem="7kN-Cz-UJA" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="uj6-MQ-RBS"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="pokeIDLabel" destination="Eoo-gg-Abs" id="wIj-ao-b4B"/>
+                        <outlet property="pokeImageView" destination="SIr-xn-hbq" id="XQ5-Jo-ZS1"/>
+                        <outlet property="pokeNamedLabel" destination="Tvh-dX-miv" id="pnT-0O-sy3"/>
+                        <outlet property="pokeSearchBar" destination="7kN-Cz-UJA" id="7cr-LJ-pgC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="96"/>
+        </scene>
+    </scenes>
+</document>
